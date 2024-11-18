@@ -1,0 +1,22 @@
+{
+  "name": "cse341w3-4",
+  "version": "1.0.0",
+  "description": "week3-4",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSwenlin/cse341W3-4.git"
+  },
+  "author": "Robyn swenlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSwenlin/cse341W3-4/issues"
+  },
+  "homepage": "https://github.com/RSwenlin/cse341W3-4#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

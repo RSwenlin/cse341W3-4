@@ -9,8 +9,8 @@ router.get('/:id', showsController.getSingle);
 
 router.post('/', showsController.createShow);
 
-router.put('/:id', showsController, updateShow);
+router.put('/:id', showsController.updateShow);
 
-router.delete('/:id', showsController, deleteShow);
+router.delete('/:id', showsController.deleteShow);
 
 module.exports = router;

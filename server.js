@@ -5,12 +5,12 @@ const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
-
+const app = express();
 
 
 
 const port = process.env.PORT || 3000;
-const app = express();
+
 
 app
     
@@ -39,7 +39,7 @@ app
     })
     .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
     .use(cors({ origin: '*'}))
-    .use('/', require('./routes/shows.js'));
+    .use('/', require('./routes/shows'));
 
     passport.use(new GitHubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,

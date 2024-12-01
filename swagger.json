@@ -2,62 +2,18 @@
   "swagger": "2.0",
   "info": {
     "title": "Shows Api",
-    "description": "Shows Api",
+    "description": "Shows API Documentation",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
-    
+    "http"
   ],
   "paths": {
-    "/": {
+    "/shows": {
       "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/login": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/logout": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/shows/": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "description": "Get all shows",
         "responses": {
           "200": {
             "description": "OK"
@@ -65,7 +21,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new show",
         "parameters": [
           {
             "name": "body",
@@ -110,10 +66,7 @@
     },
     "/shows/{id}": {
       "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "description": "Get a specific show by ID",
         "parameters": [
           {
             "name": "id",
@@ -129,7 +82,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update an existing show by ID",
         "parameters": [
           {
             "name": "id",
@@ -172,7 +125,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a show by ID",
         "parameters": [
           {
             "name": "id",
@@ -187,6 +140,26 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "description": "Login via GitHub",
+        "responses": {
+          "default": {
+            "description": "Redirect to GitHub authentication"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "Logout",
+        "responses": {
+          "default": {
+            "description": "Logout and redirect"
           }
         }
       }
